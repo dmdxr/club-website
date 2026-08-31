@@ -1,4 +1,16 @@
-/* Mobile nav toggle + light/dark theme toggle. No dependencies. */
+/* Mobile nav, light/dark theme, and Google Form embeds. No dependencies. */
+
+/* ============================================================
+   FORM SETUP — paste your two Google Form links here.
+   Open your form → Send → the < > (embed) tab → copy the src URL.
+   It should look like:
+     https://docs.google.com/forms/d/e/XXXXXXXX/viewform?embedded=true
+   Until you paste them, the pages show setup instructions instead.
+   ============================================================ */
+var FORMS = {
+  membership: "",   // General membership signup form
+  conference: ""    // Conference 2027 registration form
+};
 
 (function () {
   // --- Theme: restore saved choice, else follow the OS setting ---
@@ -52,7 +64,36 @@
     });
 
     // Keep the footer year current.
-    var yr = document.querySelector("[data-year]");
-    if (yr) yr.textContent = new Date().getFullYear();
+    document.querySelectorAll("[data-year]").forEach(function (el) {
+      el.textContent = new Date().getFullYear();
+    });
+
+    // --- Google Form embeds ---
+    // <div class="form-embed" data-form="membership" data-label="Membership form"></div>
+    document.querySelectorAll(".form-embed").forEach(function (box) {
+      var key = box.getAttribute("data-form");
+      var url = FORMS[key] || "";
+      var label = box.getAttribute("data-label") || "form";
+
+      if (/^https:\/\/docs\.google\.com\/forms\//.test(url)) {
+        var frame = document.createElement("iframe");
+        frame.src = url;
+        frame.title = label;
+        frame.loading = "lazy";
+        frame.setAttribute("frameborder", "0");
+        frame.textContent = "Loading…";
+        box.appendChild(frame);
+      } else {
+        box.innerHTML =
+          '<div class="form-setup">' +
+            '<div class="card-icon">📋</div>' +
+            '<h3>' + label + ' not connected yet</h3>' +
+            '<p>An exec needs to create the Google Form and paste its embed link into ' +
+            '<code>assets/js/main.js</code> — look for <code>FORMS.' + key + '</code> at the top of the file. ' +
+            'Step-by-step instructions are in the README.</p>' +
+            '<a class="btn btn-ghost" href="mailto:hello@example.com">Email us instead</a>' +
+          '</div>';
+      }
+    });
   });
 })();
