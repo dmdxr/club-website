@@ -460,3 +460,31 @@ table.schedule td:last-child { font-family: var(--mono); font-size: .85rem; colo
   *, *::before, *::after { animation: none !important; transition: none !important; }
   html { scroll-behavior: auto; }
 }
+
+/* ---------- Under-construction placeholder ---------- */
+.construction {
+  max-width: 640px; margin: 0 auto; text-align: center;
+  padding: 58px 32px; border-radius: 20px;
+  border: 1px dashed var(--border-lit);
+  background:
+    radial-gradient(80% 120% at 50% 0%, color-mix(in srgb, var(--accent) 13%, transparent), transparent 70%),
+    var(--surface);
+}
+.construction .glyph { font-size: 2.4rem; margin-bottom: 16px; }
+.construction h2 { font-size: clamp(1.45rem, 2.6vw, 1.85rem); margin-bottom: .5em; }
+.construction p { color: var(--muted); margin: 0 auto 24px; max-width: 460px; }
+.construction .status {
+  display: inline-flex; align-items: center; gap: 9px;
+  font-family: var(--mono); font-size: .76rem; font-weight: 500;
+  letter-spacing: .13em; text-transform: uppercase; color: var(--accent-2);
+  background: var(--surface-2); border: 1px solid var(--border);
+  border-radius: 999px; padding: 7px 16px;
+}
+.construction .status .dot {
+  width: 7px; height: 7px; border-radius: 50%; flex: none;
+  background: var(--accent-2); animation: pulse 1.9s ease-in-out infinite;
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1;  box-shadow: 0 0 0 0 color-mix(in srgb, var(--accent-2) 55%, transparent); }
+  50%      { opacity: .5; box-shadow: 0 0 0 6px transparent; }
+}
