@@ -1,0 +1,251 @@
+/* ============================================================
+   Campus Tech Club — stylesheet
+   Edit the colors in :root below to re-theme the whole site.
+   ============================================================ */
+
+:root {
+  --bg:        #0b0f17;
+  --surface:   #121826;
+  --surface-2: #171f30;
+  --border:    #253044;
+  --text:      #e8eefb;
+  --muted:     #94a3b8;
+  --accent:    #6f8dff;
+  --accent-2:  #22d3ee;
+  --accent-ink:#0b0f17;
+  --shadow:    0 10px 30px rgba(0,0,0,.35);
+  --radius:    14px;
+  --maxw:      1120px;
+  --font:      "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+[data-theme="light"] {
+  --bg:        #ffffff;
+  --surface:   #f7f9fc;
+  --surface-2: #eef2f9;
+  --border:    #dde5f0;
+  --text:      #0f172a;
+  --muted:     #566276;
+  --accent:    #3b5bdb;
+  --accent-2:  #0891b2;
+  --accent-ink:#ffffff;
+  --shadow:    0 10px 30px rgba(15,23,42,.08);
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font);
+  font-size: 16px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+img { max-width: 100%; display: block; }
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+h1, h2, h3 { line-height: 1.2; margin: 0 0 .5em; letter-spacing: -0.02em; }
+h1 { font-size: clamp(2.1rem, 5vw, 3.4rem); font-weight: 800; }
+h2 { font-size: clamp(1.6rem, 3.2vw, 2.2rem); font-weight: 700; }
+h3 { font-size: 1.15rem; font-weight: 650; }
+p  { margin: 0 0 1rem; }
+
+.wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 20px; }
+.muted { color: var(--muted); }
+.center { text-align: center; }
+
+/* ---------- Header / nav ---------- */
+.site-header {
+  position: sticky; top: 0; z-index: 50;
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+}
+.nav {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 16px; height: 66px;
+}
+.brand {
+  display: flex; align-items: center; gap: 10px;
+  font-weight: 800; font-size: 1.05rem; color: var(--text); text-decoration: none;
+  letter-spacing: -0.02em;
+}
+.brand:hover { text-decoration: none; }
+.brand-mark {
+  width: 30px; height: 30px; border-radius: 9px; flex: none;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  display: grid; place-items: center;
+  color: var(--accent-ink); font-size: .82rem; font-weight: 800;
+}
+.nav-links { display: flex; align-items: center; gap: 6px; }
+.nav-links a {
+  color: var(--muted); font-size: .94rem; font-weight: 500;
+  padding: 8px 12px; border-radius: 9px; text-decoration: none;
+}
+.nav-links a:hover { color: var(--text); background: var(--surface-2); text-decoration: none; }
+.nav-links a.active { color: var(--text); background: var(--surface-2); }
+
+.icon-btn {
+  background: var(--surface); border: 1px solid var(--border); color: var(--text);
+  width: 38px; height: 38px; border-radius: 10px; cursor: pointer;
+  display: grid; place-items: center; font-size: 1rem; line-height: 1;
+}
+.icon-btn:hover { background: var(--surface-2); }
+.nav-toggle { display: none; }
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-block; padding: 12px 22px; border-radius: 11px;
+  font-weight: 650; font-size: .95rem; text-decoration: none; cursor: pointer;
+  border: 1px solid transparent; transition: transform .12s ease, opacity .12s ease;
+}
+.btn:hover { text-decoration: none; transform: translateY(-1px); }
+.btn-primary { background: linear-gradient(135deg, var(--accent), var(--accent-2)); color: var(--accent-ink); }
+.btn-ghost { background: transparent; border-color: var(--border); color: var(--text); }
+.btn-ghost:hover { background: var(--surface-2); }
+
+/* ---------- Hero ---------- */
+.hero { padding: 84px 0 68px; position: relative; overflow: hidden; }
+.hero::before {
+  content: ""; position: absolute; inset: -40% 20% auto -10%; height: 520px;
+  background: radial-gradient(closest-side, color-mix(in srgb, var(--accent) 26%, transparent), transparent);
+  filter: blur(20px); pointer-events: none;
+}
+.hero .wrap { position: relative; }
+.eyebrow {
+  display: inline-block; font-size: .78rem; font-weight: 700; letter-spacing: .09em;
+  text-transform: uppercase; color: var(--accent-2);
+  background: var(--surface); border: 1px solid var(--border);
+  padding: 6px 13px; border-radius: 999px; margin-bottom: 20px;
+}
+.hero p.lead { font-size: 1.14rem; color: var(--muted); max-width: 620px; margin-bottom: 28px; }
+.hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+
+/* ---------- Sections ---------- */
+.section { padding: 66px 0; }
+.section-alt { background: var(--surface); border-block: 1px solid var(--border); }
+.section-head { margin-bottom: 34px; max-width: 660px; }
+.section-head p { color: var(--muted); margin: 0; }
+
+/* ---------- Grid + cards ---------- */
+.grid { display: grid; gap: 20px; }
+.grid-3 { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+.grid-4 { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+
+.card {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 24px;
+  transition: border-color .15s ease, transform .15s ease;
+}
+.card:hover { border-color: color-mix(in srgb, var(--accent) 45%, var(--border)); transform: translateY(-2px); }
+.card h3 { margin-bottom: .35em; }
+.card p { color: var(--muted); margin: 0; font-size: .95rem; }
+.card-icon { font-size: 1.6rem; margin-bottom: 12px; }
+
+/* ---------- Stats ---------- */
+.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 20px; }
+.stat { text-align: center; padding: 20px; }
+.stat .num {
+  font-size: 2.2rem; font-weight: 800; letter-spacing: -0.03em;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.stat .label { color: var(--muted); font-size: .9rem; }
+
+/* ---------- Event list ---------- */
+.event {
+  display: flex; gap: 22px; align-items: flex-start;
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 22px; margin-bottom: 16px;
+}
+.event-date {
+  flex: none; width: 74px; text-align: center;
+  background: var(--surface-2); border: 1px solid var(--border);
+  border-radius: 11px; padding: 10px 6px;
+}
+.event-date .mon { font-size: .74rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--accent-2); }
+.event-date .day { font-size: 1.5rem; font-weight: 800; line-height: 1.1; }
+.event-body { flex: 1; min-width: 0; }
+.event-body h3 { margin-bottom: .3em; }
+.event-body p { color: var(--muted); margin: 0 0 .6em; font-size: .95rem; }
+.event-meta { font-size: .85rem; color: var(--muted); display: flex; gap: 16px; flex-wrap: wrap; }
+.event.past { opacity: .62; }
+
+/* ---------- Tags ---------- */
+.tags { display: flex; gap: 7px; flex-wrap: wrap; margin-top: 14px; }
+.tag {
+  font-size: .76rem; font-weight: 600; padding: 4px 10px; border-radius: 999px;
+  background: var(--surface-2); border: 1px solid var(--border); color: var(--muted);
+}
+
+/* ---------- Team ---------- */
+.person { text-align: center; }
+.avatar {
+  width: 92px; height: 92px; border-radius: 50%; margin: 0 auto 14px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  display: grid; place-items: center;
+  font-size: 1.7rem; font-weight: 800; color: var(--accent-ink);
+}
+.person h3 { margin-bottom: .15em; font-size: 1.05rem; }
+.person .role { color: var(--accent-2); font-size: .88rem; font-weight: 600; margin-bottom: .5em; }
+.person p { font-size: .9rem; }
+
+/* ---------- FAQ ---------- */
+details.faq {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 18px 22px; margin-bottom: 12px;
+}
+details.faq summary {
+  cursor: pointer; font-weight: 650; list-style: none;
+  display: flex; justify-content: space-between; align-items: center; gap: 12px;
+}
+details.faq summary::-webkit-details-marker { display: none; }
+details.faq summary::after { content: "+"; color: var(--accent-2); font-size: 1.3rem; font-weight: 400; }
+details.faq[open] summary::after { content: "\2212"; }
+details.faq p { color: var(--muted); margin: 12px 0 0; font-size: .95rem; }
+
+/* ---------- CTA band ---------- */
+.cta {
+  background: linear-gradient(135deg, color-mix(in srgb, var(--accent) 18%, var(--surface)), var(--surface));
+  border: 1px solid var(--border); border-radius: 20px;
+  padding: 48px 34px; text-align: center;
+}
+.cta p { color: var(--muted); max-width: 520px; margin: 0 auto 24px; }
+
+/* ---------- Footer ---------- */
+.site-footer {
+  border-top: 1px solid var(--border); background: var(--surface);
+  padding: 40px 0 30px; margin-top: 0; font-size: .92rem;
+}
+.footer-grid { display: flex; justify-content: space-between; gap: 30px; flex-wrap: wrap; margin-bottom: 26px; }
+.footer-col h4 { font-size: .8rem; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); margin: 0 0 12px; }
+.footer-col a { display: block; color: var(--muted); padding: 3px 0; }
+.footer-col a:hover { color: var(--text); }
+.footer-bottom { border-top: 1px solid var(--border); padding-top: 20px; color: var(--muted); font-size: .86rem; }
+
+/* ---------- Mobile ---------- */
+@media (max-width: 760px) {
+  .nav-toggle { display: grid; }
+  .nav-links {
+    display: none; position: absolute; top: 66px; left: 0; right: 0;
+    flex-direction: column; align-items: stretch; gap: 2px;
+    background: var(--bg); border-bottom: 1px solid var(--border); padding: 12px 20px 18px;
+  }
+  .nav-links.open { display: flex; }
+  .nav-links a { padding: 11px 12px; }
+  .hero { padding: 56px 0 46px; }
+  .event { flex-direction: column; gap: 14px; }
+  .event-date { width: auto; display: inline-flex; gap: 8px; align-items: baseline; padding: 6px 14px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+  html { scroll-behavior: auto; }
+}

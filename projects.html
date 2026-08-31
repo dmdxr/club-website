@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Projects — Campus Tech Club</title>
+<meta name="description" content="Software projects built by student teams at Campus Tech Club, UTSC.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<script src="assets/js/main.js"></script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap nav">
+    <a class="brand" href="index.html"><span class="brand-mark">CT</span> Campus Tech Club</a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="events.html">Events</a>
+      <a href="projects.html">Projects</a>
+      <a href="team.html">Team</a>
+      <a href="join.html">Join</a>
+    </nav>
+    <div style="display:flex;gap:8px">
+      <button class="icon-btn" data-theme-toggle aria-label="Toggle theme">☀</button>
+      <button class="icon-btn nav-toggle" data-nav-toggle aria-label="Menu" aria-expanded="false">☰</button>
+    </div>
+  </div>
+</header>
+<section class="hero" style="padding:64px 0 40px">
+  <div class="wrap">
+    <span class="eyebrow">Student-built</span>
+    <h1>Projects</h1>
+    <p class="lead">Every term, small teams pick a problem and ship something real by Demo Night. No prior experience needed — teams are built to mix first-years with upper-years.</p>
+    <div class="hero-actions"><a class="btn btn-primary" href="join.html">Join a project team</a></div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:20px">
+  <div class="wrap">
+    <div class="section-head"><h2>Currently building</h2></div>
+    <div class="grid grid-3">
+      <div class="card">
+        <h3>CourseCompass</h3>
+        <p>A course-planning tool that maps prerequisites into a visual graph so you can see exactly what unlocks what. Built with React and a Postgres backend.</p>
+        <div class="tags"><span class="tag">React</span><span class="tag">Postgres</span><span class="tag">5 members</span></div>
+      </div>
+      <div class="card">
+        <h3>StudySpot</h3>
+        <p>Crowd-sourced live occupancy for study spaces across campus. Anyone can check in, everyone can see where there's room before they walk over.</p>
+        <div class="tags"><span class="tag">Next.js</span><span class="tag">Maps API</span><span class="tag">4 members</span></div>
+      </div>
+      <div class="card">
+        <h3>ClubBot</h3>
+        <p>The Discord bot that runs our own community — event reminders, role assignment, and a question queue for workshops.</p>
+        <div class="tags"><span class="tag">Python</span><span class="tag">discord.py</span><span class="tag">3 members</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="wrap">
+    <div class="section-head"><h2>Shipped</h2><p>Past terms. All of these are open source on our GitHub.</p></div>
+    <div class="grid grid-3">
+      <div class="card">
+        <h3>TextbookSwap</h3>
+        <p>A buy-and-sell board for course textbooks, scoped to verified students. Handled 400+ listings in its first semester.</p>
+        <div class="tags"><span class="tag">Django</span><span class="tag">Shipped 2025</span></div>
+      </div>
+      <div class="card">
+        <h3>Transit Timer</h3>
+        <p>A tiny web app showing live departure times for the bus routes that actually serve campus. Loads in under a second on transit Wi-Fi.</p>
+        <div class="tags"><span class="tag">Vanilla JS</span><span class="tag">Shipped 2025</span></div>
+      </div>
+      <div class="card">
+        <h3>GradeGraph</h3>
+        <p>Upload a syllabus, get a chart of what you need on the final. Surprisingly popular around exam season.</p>
+        <div class="tags"><span class="tag">Svelte</span><span class="tag">Shipped 2024</span></div>
+      </div>
+      <div class="card">
+        <h3>LabQueue</h3>
+        <p>A queue system for TA office hours that replaced a whiteboard and a lot of confusion. Still in use by two departments.</p>
+        <div class="tags"><span class="tag">Flask</span><span class="tag">Shipped 2024</span></div>
+      </div>
+      <div class="card">
+        <h3>ClubSite v1</h3>
+        <p>The first version of this website, built in a single workshop as a live demo of GitHub Pages.</p>
+        <div class="tags"><span class="tag">HTML/CSS</span><span class="tag">Shipped 2024</span></div>
+      </div>
+      <div class="card">
+        <h3>Your project here</h3>
+        <p>Have an idea? Pitch it at kickoff night. If two other people want to build it, it becomes a team.</p>
+        <div class="tags"><span class="tag">Open pitch</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head"><h2>How project teams work</h2></div>
+    <div class="grid grid-3">
+      <div class="card">
+        <div class="card-icon">1️⃣</div>
+        <h3>Pitch or pick</h3>
+        <p>At kickoff night, anyone can pitch an idea. You either join one you like or bring your own.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">2️⃣</div>
+        <h3>Build weekly</h3>
+        <p>Teams meet once a week for about two hours. A mentor from the exec team checks in and unblocks you.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">3️⃣</div>
+        <h3>Demo it</h3>
+        <p>End of term, you present to the club. It ships publicly, and it goes on your resume with a real link.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-col" style="max-width:280px">
+        <a class="brand" href="index.html" style="margin-bottom:10px"><span class="brand-mark">CT</span> Campus Tech Club</a>
+        <p class="muted" style="font-size:.9rem">A student-run tech community at the University of Toronto Scarborough.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <a href="events.html">Events</a>
+        <a href="projects.html">Projects</a>
+        <a href="team.html">Team</a>
+        <a href="join.html">Join</a>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <a href="#">Discord</a>
+        <a href="#">Instagram</a>
+        <a href="#">GitHub</a>
+        <a href="mailto:hello@example.com">Email us</a>
+      </div>
+    </div>
+    <div class="footer-bottom">© <span data-year>2026</span> Campus Tech Club · Built by students, hosted on GitHub Pages.</div>
+  </div>
+</footer>
+
+</body>
+</html>
