@@ -109,7 +109,7 @@ p  { margin: 0 0 1rem; }
   backdrop-filter: blur(12px) saturate(1.3);
   border-bottom: 1px solid var(--border);
 }
-.nav { display: flex; align-items: center; justify-content: space-between; gap: 16px; height: 68px; }
+.nav { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 68px; }
 
 .brand {
   display: flex; align-items: center; gap: 11px;
@@ -117,6 +117,7 @@ p  { margin: 0 0 1rem; }
   color: var(--text); text-decoration: none; letter-spacing: -0.01em;
 }
 .brand:hover { text-decoration: none; }
+.brand-name { display: inline; }
 .brand-sub { color: var(--muted); font-weight: 400; }
 
 /* Brand mark: the apple-and-rings logo */
@@ -427,18 +428,28 @@ table.schedule td:last-child { font-family: var(--mono); font-size: .85rem; colo
 }
 
 /* ---------- Mobile ---------- */
-@media (max-width: 1080px) and (min-width: 761px) {
-  .brand-sub { display: none; }
-}
-@media (max-width: 760px) {
+/* Nav collapses at 900px, not 760px, so the full club name always fits
+   beside the links rather than being truncated. */
+@media (max-width: 900px) {
   .nav-toggle { display: grid; }
   .nav-links {
-    display: none; position: absolute; top: 68px; left: 0; right: 0;
+    display: none; position: absolute; top: 100%; left: 0; right: 0;
     flex-direction: column; align-items: stretch; gap: 2px;
     background: var(--bg); border-bottom: 1px solid var(--border); padding: 12px 20px 18px;
   }
   .nav-links.open { display: flex; }
   .nav-links a { padding: 11px 12px; }
+}
+
+/* On narrow phones the name stacks under itself rather than shrinking away. */
+@media (max-width: 520px) {
+  .brand { font-size: 1rem; }
+  .brand-name { display: flex; flex-direction: column; line-height: 1.14; }
+  .brand-sub { font-size: .84em; }
+  .brand-sub::before { content: none; }
+}
+
+@media (max-width: 760px) {
   .hero { padding: 58px 0 50px; }
   .hero::after { width: 320px; height: 320px; top: -60px; right: -120px; opacity: .12; }
   .event { flex-direction: column; gap: 14px; }
