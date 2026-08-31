@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Newton's Apples Physics Society">
+  <title>An apple encircled by Saturn's rings</title>
+  <!-- Simplified sibling of logo.svg for small sizes (favicon, 16-32px):
+       bigger apple, one bolder ring, no sparkles or second ring. -->
+  <defs>
+    <radialGradient id="nm-apple" cx="36%" cy="26%" r="82%">
+      <stop offset="0"    stop-color="#ff9c86"/>
+      <stop offset="42%"  stop-color="#ee4058"/>
+      <stop offset="100%" stop-color="#b01a3c"/>
+    </radialGradient>
+    <linearGradient id="nm-ring" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0"    stop-color="#ffe6ad"/>
+      <stop offset="45%"  stop-color="#f2c14e"/>
+      <stop offset="100%" stop-color="#cf8f1f"/>
+    </linearGradient>
+    <linearGradient id="nm-leaf" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0"    stop-color="#2f9e4f"/>
+      <stop offset="100%" stop-color="#86e58f"/>
+    </linearGradient>
+  </defs>
+
+  <g transform="rotate(-18 32 38)" fill="none" stroke="url(#nm-ring)" stroke-linecap="round">
+    <path d="M 1 38 A 31 10 0 0 1 63 38" stroke-width="5" opacity=".5"/>
+  </g>
+
+  <path d="M 32 25 C 32.5 19 33.5 15 35.5 11.5" stroke="#8a5a30"
+        stroke-width="3.8" stroke-linecap="round" fill="none"/>
+  <path d="M 36 14 C 41 7.6 50.2 8.2 51.8 11.8 C 49.6 18.8 40.4 20.4 36 14 Z"
+        fill="url(#nm-leaf)"/>
+
+  <path d="M 32 25
+           C 28.5 18, 20 16, 15 20.5
+           C 8.5 25.5, 7.5 35.5, 11.5 45
+           C 15 52.5, 21.5 58.5, 27.5 58.5
+           C 30 58.5, 31 57.3, 32 57.3
+           C 33 57.3, 34 58.5, 36.5 58.5
+           C 42.5 58.5, 49 52.5, 52.5 45
+           C 56.5 35.5, 55.5 25.5, 49 20.5
+           C 44 16, 35.5 18, 32 25 Z"
+        fill="url(#nm-apple)"/>
+  <ellipse cx="21" cy="33" rx="5" ry="8.4" fill="#fff" opacity=".3"
+           transform="rotate(-24 21 33)"/>
+
+  <g transform="rotate(-18 32 38)" fill="none" stroke="url(#nm-ring)" stroke-linecap="round">
+    <path d="M 1 38 A 31 10 0 0 0 63 38" stroke-width="5"/>
+  </g>
+</svg>

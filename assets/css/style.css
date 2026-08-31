@@ -119,19 +119,9 @@ p  { margin: 0 0 1rem; }
 .brand:hover { text-decoration: none; }
 .brand-sub { color: var(--muted); font-weight: 400; }
 
-/* Brand mark: a nucleus with an orbit around it */
+/* Brand mark: the apple-and-rings logo */
 .brand-mark {
-  position: relative; flex: none;
-  width: 30px; height: 30px; border-radius: 50%;
-  background: radial-gradient(circle at 32% 30%, #ffe9a8, var(--gold) 60%, #c98f1e);
-  display: grid; place-items: center;
-  color: #3a2a05; font-family: var(--mono); font-size: .68rem; font-weight: 600;
-  letter-spacing: -.02em;
-}
-.brand-mark::after {
-  content: ""; position: absolute; inset: -5px -9px;
-  border: 1px solid var(--accent); border-radius: 50%;
-  transform: rotate(-24deg); opacity: .75; pointer-events: none;
+  width: 38px; height: 38px; flex: none; display: block;
 }
 
 .nav-links { display: flex; align-items: center; gap: 4px; }
@@ -471,6 +461,7 @@ table.schedule td:last-child { font-family: var(--mono); font-size: .85rem; colo
     var(--surface);
 }
 .construction .glyph { font-size: 2.4rem; margin-bottom: 16px; }
+.construction .glyph img { width: 92px; height: 92px; margin: 0 auto; }
 .construction h2 { font-size: clamp(1.45rem, 2.6vw, 1.85rem); margin-bottom: .5em; }
 .construction p { color: var(--muted); margin: 0 auto 24px; max-width: 460px; }
 .construction .status {

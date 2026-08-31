@@ -20,6 +20,8 @@ install — edit a file, commit it, and GitHub Pages redeploys in about a minute
 | `team.html` | Executive team profiles |
 | `join.html` | Join as a member — benefits, membership form, FAQ |
 | `404.html` | Shown for broken links |
+| `assets/img/logo.svg` | Full logo — apple with Saturn's rings. Use where it's shown large |
+| `assets/img/logo-mark.svg` | Simplified logo for small sizes (nav, favicon) |
 | `assets/css/style.css` | All styling |
 | `assets/js/main.js` | Form embeds, mobile menu, light/dark toggle |
 
