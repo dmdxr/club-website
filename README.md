@@ -31,7 +31,7 @@ install — edit a file, commit it, and GitHub Pages redeploys in about a minute
 python3 -m http.server 8000
 ```
 
-Then visit <http://localhost:8765>. (Opening the `.html` file directly also works,
+Then visit <http://localhost:8000>. (Opening the `.html` file directly also works,
 but the `404.html` links assume a server.)
 
 ### Common edits
