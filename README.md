@@ -14,11 +14,11 @@ install — edit a file, commit it, and GitHub Pages redeploys in about a minute
 | File | What it is |
 |---|---|
 | `index.html` | Home — hero, what we do, conference banner, next events |
-| `about.html` | About the club — mission, values, history timeline, FAQ |
+| `about.html` | About the club — under-construction placeholder |
 | `events.html` | Full event calendar (upcoming + past) |
-| `conference.html` | Conference 2027 — tracks, schedule, key dates, registration form |
+| `conference.html` | Conference — under-construction placeholder |
 | `team.html` | Executive team profiles |
-| `join.html` | Join as a member — benefits, membership form, FAQ |
+| `join.html` | Join as a member — under-construction placeholder |
 | `404.html` | Shown for broken links |
 | `assets/img/logo.svg` | Full logo — apple with Saturn's rings. Use where it's shown large |
 | `assets/img/logo-mark.svg` | Simplified logo for small sizes (nav, favicon) |
