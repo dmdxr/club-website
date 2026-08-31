@@ -315,6 +315,8 @@ p  { margin: 0 0 1rem; }
   transform: rotate(-22deg);
 }
 .person h3 { margin-bottom: .15em; font-size: 1.06rem; }
+/* No bio after the role? Don't leave a dangling margin. */
+.person .role:last-child { margin-bottom: 0; }
 .person .role {
   font-family: var(--mono); font-size: .76rem; font-weight: 500;
   letter-spacing: .09em; text-transform: uppercase; color: var(--gold); margin-bottom: .7em;
