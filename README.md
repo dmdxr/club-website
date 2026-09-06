@@ -56,7 +56,6 @@ in the header, and the footer. A find-and-replace across all `.html` files does 
 
 Search the project for these and replace them:
 
-- `hello@example.com` — the real club email address
 - `href="#"` on the Discord / Instagram / GitHub links
 - The stats on `index.html` and `conference.html` (member counts, talk counts)
 - Team member names, roles, and bios in `team.html`

@@ -8,7 +8,7 @@
    Until you paste them, the pages show setup instructions instead.
    ============================================================ */
 var FORMS = {
-  membership: "",   // General membership signup form
+  membership: "https://docs.google.com/forms/d/e/1FAIpQLSffmlUdhx7PIn71s0joy9cJR1dQ0qhJ6ouThBSy_wmvzqZ_tA/viewform?embedded=true",   // General membership signup form
   conference: ""    // Conference 2027 registration form
 };
 
@@ -91,7 +91,7 @@ var FORMS = {
             '<p>An exec needs to create the Google Form and paste its embed link into ' +
             '<code>assets/js/main.js</code> — look for <code>FORMS.' + key + '</code> at the top of the file. ' +
             'Step-by-step instructions are in the README.</p>' +
-            '<a class="btn btn-ghost" href="mailto:hello@example.com">Email us instead</a>' +
+            '<a class="btn btn-ghost" href="mailto:utsc.naps@seds.ca">Email us instead</a>' +
           '</div>';
       }
     });
