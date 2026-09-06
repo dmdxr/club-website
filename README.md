@@ -36,29 +36,26 @@ but the `404.html` links assume a server.)
 
 ### Common edits
 
-**Add an event** — copy an existing `<div class="event">` block in `events.html`
+**Adding an event** — copy an existing `<div class="event">` block in `events.html`
 and change the month, day, title, and details.
 
-**Add a team member** — copy a `<div class="card person">` block in `team.html`.
+**Adding a team member** — copy a `<div class="card person">` block in `team.html`.
 The `avatar` div holds initials; swap it for
 `<img class="avatar" src="assets/img/name.jpg" alt="">` to use a photo.
 
-**Update the conference schedule** — the two tables in `conference.html` are plain
+**Updating the conference schedule** — the two tables in `conference.html` are plain
 `<table class="schedule">`; add or edit `<tr>` rows.
 
-**Change the colors** — edit the CSS variables at the top of `assets/css/style.css`.
+**Changing the colours** — edit the CSS variables at the top of `assets/css/style.css`.
 `:root` is dark mode, `[data-theme="light"]` is light mode.
 
-**Change the club name** — it appears in each page's `<title>`, the `.brand` link
+**Changing the club name** — it appears in each page's `<title>`, the `.brand` link
 in the header, and the footer. A find-and-replace across all `.html` files does it.
 
 ### Still to fill in
 
 Search the project for these and replace them:
 
-- `href="#"` on the Discord / Instagram / GitHub links
-- The stats on `index.html` and `conference.html` (member counts, talk counts)
-- Team member names, roles, and bios in `team.html`
 - Event dates and room numbers throughout
 
 ## Publishing
