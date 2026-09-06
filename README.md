@@ -2,7 +2,7 @@
 
 A static, no-build-step website hosted free on GitHub Pages.
 
-**Live site:** https://dmdxr.github.io/club-website/ 
+**Live site:** https://dmdxr.github.io/utsc-naps/ 
 
 ---
 
